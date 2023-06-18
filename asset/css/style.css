@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --main-bg: #10375C;
+}
 html {
     font-size: 62.5%;
 }
@@ -8,3 +11,132 @@ body {
     font-size: 1.6rem;
     font-family: 'Sora', sans-serif;
 }
+/* Common */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+.btn { 
+    display: inline-block;
+    --height: 60px;
+    height: var(--height);
+    min-width: 205px;
+    padding: 0 20px;
+    color: #fff;
+    background: #2E80CE;
+    line-height: var(--height);
+    border-radius: 99px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+/* Header */
+.header {
+    min-height: 100vh;
+    background: var(--main-bg);
+    padding-top: 30px;
+}
+
+.logo {
+    position: relative;
+    font-size: 1rem;
+    display: flex;
+}
+.logo__circle::before ,
+.logo__circle::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%; 
+    
+}
+.logo__circle::before {
+    width: 3em;
+    height: 3em;
+    background: #2E80CE;
+}
+.logo__circle::after {
+    top: 1.1em;
+    left: 1.1em;
+    position: absolute;
+    width: 1.6em;
+    height: 1.6em;
+    background: #fff;
+}
+.logo__text {
+    color: #FFFFFF;
+    margin-left: 0.6em;
+    text-align: right;
+}
+.logo__brand {
+    display: block;
+    font-weight: 400;
+    font-size: 1.8em;
+    line-height: 1em;
+
+}
+.logo__brand--small {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+/* header-top */
+.header-top { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-top.fixed {
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+}
+.header-top .navbar .item {
+    padding: 8px 21px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #C9D2DA;
+}
+.header-top .active .item {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #C9D2DA;
+}
+.navbar .item:hover {
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav__active {
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav__active::before {
+    position: relative;
+    left: -8px;
+    top: -2px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #FFF;
+    border-radius: 50%;
+}.header-top .active {
+      display: flex;
+}
+.header-top .active a {
+    padding: 0 16px;
+}
+.active__login {
+    line-height: 45px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #C9D2DA;
+}
+.active__signup {
+
+   min-width: 104px;
+   --height: 45px;
+    line-height: 45px;
+
+}
+   
